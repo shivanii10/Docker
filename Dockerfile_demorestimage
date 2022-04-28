@@ -1,0 +1,5 @@
+from openjdk
+RUN mkdir /demos
+ADD demorestjar.jar /demos
+EXPOSE 8084
+CMD ["java","-jar","/demos/demorestjar.jar"]
