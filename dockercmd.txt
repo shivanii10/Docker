@@ -1,0 +1,38 @@
+docker --version
+docker images --- Lists all the images available
+docker ps --- Lists all the running containers
+docker ps -a --- lists all the containers including stopped
+docker stop <containername>/<containerId> -- used to stop a running container
+docker start <containername>/<contianerId> -- used to start a stopped container
+docker rm <containerId/name> -- to remove a container
+docker rm -f <containerId/name> to force remove the container even if its running.
+docker rmi <imageid/name> -- to remove an image
+docker rmi -f <imageid/name> --will remove an image even containers are associated.
+docker run -d -p <hostmachineport>:<containerport> -it --name <containername> <imageid/name>
+
+docker run -d -p 8081:8080 -it --name <containername> <imageid/name>
+           | 
+docker run -d -p 8081:80 -it --name <containername> <imageid/name>
+
+docker exec -it <containername/id> /bin/bash -- to move inside a running conatiner
+docker pull <imagename> -- pull the imgae from the docker hub
+docker push <imagename> --- this will push into your docker repository
+
+DOCKER Image
+
+docker build -t <name> . -- build image
+docker run -d -it <imagename/id> -- run image, creates container with anonymous names
+
+-Simultaneous exchange of data between container and host machine.
+docker run -d -it -v <Host-machine location : Container location> <imageame/id> 
+
+---------------------------------------------------------------------------------------------------------------------
+
+K8s Architecture
+________________
+
+cluster is collection of one or more nodes (Master or Worker nodes).
+
+Master node (manages the cluster, monitor all nodes)-> Node/Worker node is a collection of one or more pods.
+
+pods is a collection of one or more containers.
