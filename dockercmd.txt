@@ -20,6 +20,9 @@ docker push <imagename> --- this will push into your docker repository
 
 DOCKER Image
 
+docker build -t <image-name> -f <Dockerfile name with extn> .  -- To build Image if system is not able to recognize dockerfile
+docker build -t my-image -f Dockerfile.txt .
+
 docker build -t <name> . -- build image
 docker run -d -it <imagename/id> -- run image, creates container with anonymous names
 
