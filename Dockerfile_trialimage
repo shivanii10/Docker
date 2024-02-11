@@ -1,3 +1,0 @@
-from openjdk
-RUN mkdir /trial
-ADD Trial.java /trial
